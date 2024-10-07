@@ -1,35 +1,36 @@
 @echo off
 setlocal
 
-REM Define the current directory (where run.bat is located)
+REM Définir le répertoire courant (où run.bat est situé)
 set "currentDir=%~dp0"
 
-REM Define the path of the PowerShell script (located in the same directory as run.bat)
+REM Définir le chemin du script PowerShell (situé dans le même répertoire que run.bat)
 set "scriptPath=%currentDir%Get-WindowsAutoPilotInfo.ps1"
 
-REM Define the output file path (also in the same directory as run.bat)
+REM Définir le chemin du fichier de sortie (également dans le même répertoire que run.bat)
 set "outputFile=%currentDir%AutoPilotHWID.csv"
 
-REM Execute the PowerShell script with the argument -OutputFile
-echo Execution du script PowerShell...
+REM Exécuter le script PowerShell avec l'argument -OutputFile
+echo Exécution du script PowerShell...
 powershell -ExecutionPolicy Bypass -File "%scriptPath%" -OutputFile "%outputFile%"
 
-REM Check if the PowerShell command was successful
+REM Vérifier si la commande PowerShell a réussi
 if %ERRORLEVEL% neq 0 (
-    echo Une erreur est survenue lors de l'execution du script PowerShell.
+    echo Une erreur est survenue lors de l'exécution du script PowerShell.
     exit /b %ERRORLEVEL%
 )
 
-REM Check if the output file was created
+REM Vérifier si le fichier de sortie a été créé
 if exist "%outputFile%" (
-    echo Le fichier "%outputFile%" a ete cree avec succes.
+    echo Le fichier "%outputFile%" a été créé avec succès.
 ) else (
-    echo Le fichier "%outputFile%" n'a pas ete cree.
+    echo Le fichier "%outputFile%" n'a pas été créé.
     exit /b 1
 )
 
-REM Pause to keep the window open after execution
+REM Pause pour garder la fenêtre ouverte après l'exécution
 pause
 
 endlocal
+
 
