@@ -1,6 +1,6 @@
 # Script d'obtention du HWID pour Windows Autopilot (Intune)
 
-Utilisation du script Powershell Get-WindowsAutopilotInfo.ps1 fourni par Microsoft pour exporter les données HWID (Numéro de série et hashage matériel) du PC dans un ficher .csv. Il peut servir pour inscrire manuellement des appareils sur Intune. Script utilisable via session powershell, en local, sur réseau externe, interne et hors réseau, etc...
+Utilisation du script Powershell Get-WindowsAutopilotInfo.ps1 fourni par Microsoft pour exporter les données HWID (Numéro de série et hashage matériel) du PC dans un ficher .csv. Il peut servir pour inscrire manuellement des appareils sur Intune. Il peut-être executable via session powershell, depuis un support amovible en local, sur réseau externe, interne et hors réseau. Surtout, il a le gros avantage de ne pas à avoir à installer les fonctionnalités du package NuGet lors du téléchargement du fichier .ps1 via commandes Powershell qui est souvent bloqué sur les réseaux internes d'entreprise.
 
 ## Instructions
 
