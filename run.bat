@@ -11,20 +11,20 @@ REM Définir le chemin du fichier de sortie (également dans le même répertoir
 set "outputFile=%currentDir%AutoPilotHWID.csv"
 
 REM Exécuter le script PowerShell avec l'argument -OutputFile
-echo Exécution du script PowerShell...
+echo Execution du script PowerShell...
 powershell -ExecutionPolicy Bypass -File "%scriptPath%" -OutputFile "%outputFile%"
 
 REM Vérifier si la commande PowerShell a réussi
 if %ERRORLEVEL% neq 0 (
-    echo Une erreur est survenue lors de l'exécution du script PowerShell.
+    echo Une erreur est survenue lors de l'execution du script PowerShell.
     exit /b %ERRORLEVEL%
 )
 
 REM Vérifier si le fichier de sortie a été créé
 if exist "%outputFile%" (
-    echo Le fichier "%outputFile%" a été créé avec succès.
+    echo Le fichier "%outputFile%" a ete cree avec succes.
 ) else (
-    echo Le fichier "%outputFile%" n'a pas été créé.
+    echo Le fichier "%outputFile%" n'a pas ete cree.
     exit /b 1
 )
 
