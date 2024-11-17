@@ -33,9 +33,9 @@ if %ERRORLEVEL% neq 0 (
 
 :: Vérifier si le fichier de sortie a été créé
 if exist "%outputFile%" (
-    PowerShell -Command Write-Host  ""%outputFile%" -> OK" -ForeGroundColor Green
+    PowerShell -Command "Write-Host '%outputFile% -> OK'" -ForeGroundColor Green
 ) else (
-    PowerShell -Command Write-Host ""%outputFile%" -> NOK" -ForeGroundColor Red
+    PowerShell -Command "Write-Host 'Erreur lors de l'extraction du fichier AutoPilotHWID.csv'" -ForeGroundColor Red
     exit /b %ERRORLEVEL%
 )
 
