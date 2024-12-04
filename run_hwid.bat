@@ -11,36 +11,54 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
-:: Définir le répertoire courant (où run.bat est situé)
+echo.
+echo ##############################################
+echo #                                            #
+echo #         SCRIPT D'OBTENTION DU HWID         #
+echo #     Auteur: MANSUY Leo - Alternant TAM     #
+echo #                                            #
+echo ##############################################
+echo.
+
+:: Chemin du répertoire actuel
 set "currentDir=%~dp0"
 
-:: Définir le chemin du script PowerShell (situé dans le même répertoire que run_hwid.bat)
+:: Chemin du script PowerShell (dans le même répertoire que le .bat)
 set "scriptPath=%currentDir%Get-WindowsAutoPilotInfo.ps1"
 
-:: Définir le chemin du fichier de sortie (également dans le même répertoire que run_hwid.bat)
+:: Vérification si le script PowerShell existe
+if not exist "%scriptPath%" (
+    PowerShell -Command "Write-Host 'Le script Get-WindowsAutoPilotInfo.ps1 est introuvable, merci de copier ce script .ps1 dans le dossier du script .bat' -ForegroundColor Red"
+    echo.
+    pause
+    goto end
+)
+
+:: Chemin du fichier de sortie (dans le même répertoire que le .bat)
 set "outputFile=%currentDir%AutoPilotHWID.csv"
 
 :: Exécuter le script PowerShell avec l'argument -OutputFile
 echo Lancement du script PowerShell Get-WindowsAutoPilotInfo...
-powershell -ExecutionPolicy Bypass -File "%scriptPath%" -OutputFile "%outputFile%"
+PowerShell -ExecutionPolicy Bypass -File "%scriptPath%" -OutputFile "%outputFile%" >nul
+
 if %ERRORLEVEL% neq 0 (
-    PowerShell -Command "Write-Host 'Une erreur est survenue lors du lancement du script PowerShell Get-WindowsAutoPilotInfo.' -ForegroundColor Red"
-    echo Appuyez sur une touche pour continuer...
-    pause >nul
+    PowerShell -Command "Write-Host 'Une erreur est survenue lors du lancement du script PowerShell Get-WindowsAutoPilotInfo' -ForegroundColor Red"
+    echo.
+    pause
     goto end
 )
 
-:: Vérifier si le fichier de sortie a été créé
+:: Vérification si le fichier de sortie a été créé
 if exist "%outputFile%" (
-    PowerShell -Command "Write-Host '%outputFile% -> OK' -ForegroundColor Green"
+    PowerShell -Command "Write-Host '%outputFile% -> Extraction du fichier AutoPilotHWID.csv OK' -ForegroundColor Green"
+    echo.
 ) else (
     PowerShell -Command "Write-Host 'Erreur lors de l'extraction du fichier AutoPilotHWID.csv' -ForegroundColor Red"
-    echo Appuyez sur une touche pour continuer...
-    pause >nul
+    echo.
+    pause
     goto end
 )
 
-:: Pause pour garder la fenêtre ouverte après l'exécution
 pause
 
 :end
