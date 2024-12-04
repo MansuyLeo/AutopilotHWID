@@ -28,6 +28,7 @@ powershell -ExecutionPolicy Bypass -File "%scriptPath%" -OutputFile "%outputFile
 if %ERRORLEVEL% neq 0 (
     PowerShell -Command Write-Host "Une erreur est survenue lors du lancement du script PowerShell Get-WindowsAutoPilotInfo." -ForegroundColor Red
     exit /b %ERRORLEVEL%
+    pause
 )
 
 :: Vérifier si le fichier de sortie a été créé
@@ -36,6 +37,7 @@ if exist "%outputFile%" (
 ) else (
     PowerShell -Command "Write-Host 'Erreur lors de l'extraction du fichier AutoPilotHWID.csv'" -ForeGroundColor Red
     exit /b %ERRORLEVEL%
+    pause
 )
 
 :: Pause pour garder la fenêtre ouverte après l'exécution
