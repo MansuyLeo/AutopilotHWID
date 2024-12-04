@@ -26,7 +26,6 @@ powershell -ExecutionPolicy Bypass -File "%scriptPath%" -OutputFile "%outputFile
 
 :: Vérifier si la commande PowerShell a réussi
 if %ERRORLEVEL% neq 0 (
-    color 0C
     PowerShell -Command Write-Host "Une erreur est survenue lors du lancement du script PowerShell Get-WindowsAutoPilotInfo." -ForegroundColor Red
     exit /b %ERRORLEVEL%
 )
