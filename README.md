@@ -4,14 +4,14 @@ Utilisation du script Powershell Get-WindowsAutopilotInfo.ps1 fourni par Microso
 
 ## Instructions
 
-Méthode avec .exe
+### Méthode avec .exe:
 1. Téléchargez et éxecutez en tant qu'administrateur "AutoPilotHWID.exe"
 2. Le fichier "AutopilotHWID.csv" se générera dans le dossier de l'application. Vérifiez qu'il n'est pas vide.
 
-Méthode avec .bat et .ps1 (si méthode .exe non fonctionnel)
-1. Lancez "run_hwid.bat" en tant qu'administrateur (Get-WindowsAutopilotInfo.ps1 doit être dans le même dossier que le fichier .bat)
+### Méthode avec .bat et .ps1 (si méthode .exe non fonctionnel):
+1. Téléchargez "run_hwid.bat" et "Get-WindowsAutoPilotInfo.ps1" et déplacer les dans un même dossier
+1. Executez "run_hwid.bat" en tant qu'administrateur
 2. Le fichier "AutopilotHWID.csv" se générera dans le dossier du script. Vérifiez qu'il n'est pas vide.
 
-Contact: leo.mansuy@sncf.fr - mansuy.leo.mz@gmail.com
-
 Script par MANSUY Léo. Alternant TAM PSL chez e.SNCF Solutions.
+Contact: leo.mansuy@sncf.fr - mansuy.leo.mz@gmail.com
