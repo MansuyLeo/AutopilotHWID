@@ -16,7 +16,7 @@ Utilisation du script Powershell Get-WindowsAutopilotInfo.ps1 fourni par Microso
 ### Méthode non-recommandé avec .exe (bloqué par Windows Defender):
 1. Téléchargez et éxecutez en tant qu'administrateur "AutoPilotHWID.exe".
 2. Le fichier "AutopilotHWID.csv" se générera dans le dossier de l'application. Vérifiez qu'il n'est pas vide.
-<span style="color: red;">**NOTE IMPORTANTE**</span>: Si Windows Defender est actif sur le poste, le .exe sera mis en quarantaine, il faut ajouter le faux-positif en menaces autorisées depuis Windows Defender puis répétez l'étape 1. Je travaille actuellement pour vérifier le script par microsoft en faux positif.
+**NOTE IMPORTANTE**: Si Windows Defender est actif sur le poste, le .exe sera mis en quarantaine, il faut ajouter le faux-positif en menaces autorisées depuis Windows Defender puis répétez l'étape 1. Je travaille actuellement pour vérifier le script par microsoft en faux positif.
 
 Le répo est public car c'est un script plutôt général.
 Script par MANSUY Léo. Alternant TAM PSL chez e.SNCF Solutions.
