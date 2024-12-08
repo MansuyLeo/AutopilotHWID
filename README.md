@@ -9,7 +9,7 @@ Utilisation du script Powershell Get-WindowsAutopilotInfo.ps1 fourni par Microso
 1. Executez "run_hwid.bat" en tant qu'administrateur.
 2. Le fichier "AutopilotHWID.csv" se générera dans le dossier du script. Vérifiez qu'il n'est pas vide.
 
-### Méthode non-recommandé avec .exe (bloqué par Windows Defender):
+### Méthode non-recommandé avec .exe (dev branch):
 1. Téléchargez et éxecutez en tant qu'administrateur "AutoPilotHWID.exe".
 2. Le fichier "AutopilotHWID.csv" se générera dans le dossier de l'application. Vérifiez qu'il n'est pas vide.
 
