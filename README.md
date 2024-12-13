@@ -4,16 +4,16 @@ Utilisation du script Powershell Get-WindowsAutopilotInfo.ps1 fourni par Microso
 
 ## Instructions
 
-### Méthode fiable avec .bat et .ps1:
 1. Téléchargez "run_hwid.bat" et "Get-WindowsAutoPilotInfo.ps1" et déplacer les dans un même dossier.
 1. Executez "run_hwid.bat" en tant qu'administrateur.
 2. Le fichier "AutopilotHWID.csv" se générera dans le dossier du script. Vérifiez qu'il n'est pas vide.
 
-### Méthode non-recommandé avec .exe (dev branch):
-1. Téléchargez et éxecutez en tant qu'administrateur "AutoPilotHWID.exe".
-2. Le fichier "AutopilotHWID.csv" se générera dans le dossier de l'application. Vérifiez qu'il n'est pas vide.
+Execution en mode OOBE (Pré-appro Intune par exemple):  
 
-**NOTE IMPORTANTE CONCERNANT LA METHODE .EXE**: Windows Defender détecte l'application comme un trojan, ce qui est un faux positif que j'essaye de corriger avec Microsoft directement et le code du .exe sera re-adapté. Ne pas executer le .exe sur un réseau d'entreprise pour éviter d'alerter votre équipe cybersécurité pour rien. Il faut privilègié la méthode .bat.
+1. Téléchargez "run_hwid.bat" et "Get-WindowsAutoPilotInfo.ps1" et déplacer les dans un même dossier sur un support amovible
+2. Shift + F10 pour lancer un cmd
+3. tapez explorer.exe
+4. Naviguez vers le support amovible et executez "run_hwid.bat" en tant qu'administrateur  
 
 Le répo est public car c'est un script plutôt général.  
 Script par MANSUY Léo. Alternant TAM PSL chez e.SNCF Solutions.  
