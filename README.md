@@ -10,10 +10,10 @@ Utilisation du script Powershell Get-WindowsAutopilotInfo.ps1 fourni par Microso
 
 Execution en mode OOBE (Pré-appro Intune par exemple):  
 
-1. Téléchargez "run_hwid.bat" et "Get-WindowsAutoPilotInfo.ps1" et déplacer les dans un même dossier sur un support amovible
-2. Shift + F10 pour lancer un cmd
-3. tapez explorer.exe
-4. Naviguez vers le support amovible et executez "run_hwid.bat" en tant qu'administrateur  
+1. Téléchargez "run_hwid.bat" et "Get-WindowsAutoPilotInfo.ps1" et déplacer les dans un même dossier sur un support amovible puis insérer le support amovible dans le PC en phase OOBE.
+2. Appuyez en même temps sur Shift + F10 pour lancer un invité de commandes (cmd).
+3. tapez: explorer.exe puis la touche "Entrée".
+4. Naviguez vers le support amovible et executez "run_hwid.bat" en tant qu'administrateur.  
 
 Le répo est public car c'est un script plutôt général.  
 Script par MANSUY Léo. Alternant TAM PSL chez e.SNCF Solutions.  
