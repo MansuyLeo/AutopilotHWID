@@ -29,7 +29,7 @@ set "scriptPath=%currentDir%Get-WindowsAutoPilotInfo.ps1"
 
 :: Vérification si le script PowerShell existe
 if not exist "%scriptPath%" (
-    PowerShell -Command "Write-Host 'Le script Get-WindowsAutoPilotInfo.ps1 est introuvable, merci de copier ce script .ps1 dans le dossier du script .bat' -ForegroundColor Red"
+    PowerShell -Command "Write-Host 'Le script Get-WindowsAutoPilotInfo.ps1 est introuvable, merci de copier le script Get-WindowsAutoPilotInfo.ps1 dans le dossier situé à l'emplacement du script run_hwid.bat' -ForegroundColor Red"
     echo.
     pause
     goto end
