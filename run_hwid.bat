@@ -14,8 +14,9 @@ if %errorlevel% neq 0 (
 echo.
 echo ##############################################
 echo #                                            #
-echo #         SCRIPT D'OBTENTION DU HWID         #
-echo #     Auteur: MANSUY Leo - Alternant TAM     #
+echo #     SCRIPT D'OBTENTION DU HWID EN .CSV     #
+echo #   Auteur: MANSUY Leo - Alternant TAM PSL   #
+echo #              e.SNCF Solutions              #
 echo #                                            #
 echo ##############################################
 echo.
