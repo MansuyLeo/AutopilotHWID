@@ -15,6 +15,5 @@ Execution en mode OOBE (Pré-appro Intune par exemple):
 3. tapez: explorer.exe puis la touche "Entrée".
 4. Naviguez vers le support amovible et éxecutez "run_hwid.bat" en tant qu'administrateur.  
 
-Le répo est public car c'est un script plutôt général.  
 Script par MANSUY Léo. Alternant TAM PSL chez e.SNCF Solutions.  
 Contact: leo.mansuy@sncf.fr - mansuy.leo.mz@gmail.com  
